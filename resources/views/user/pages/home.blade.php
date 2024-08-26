@@ -1,5 +1,9 @@
 @extends('user.layouts.master')
 
+@section('title')
+    <title>RKPD Marketing Home</title>
+@endsection
+
 @section('content')
     <section class="banner-section">
         <div class="container">
@@ -7,9 +11,10 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="banner_content">
                         <h2>RPKD, We Build, We Grow—Your Success, Our Show!</h2>
-                        <p class="paragraph">At RPKD Marketings, we don't just deliver results—we redefine the standards of success.</p>
-                        <a class="get_started" href="contact.html">Get Started</a>
-                        <a class="how_it_works" href="about.html">How It Works?</a>
+                        <p class="paragraph">At RPKD Marketings, we don't just deliver results—we redefine the standards of
+                            success.</p>
+                        <a class="get_started" href="{{ route('contact') }}">Get Started</a>
+                        <a class="how_it_works" href="#howitowkrs">How It Works?</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-md-left text-center">
@@ -37,7 +42,8 @@
 
                         </h2>
                         <p class="text mb-0">
-                            At RPKD, we are driven by a profound commitment to transforming brands and delivering extraordinary results.
+                            At RPKD, we are driven by a profound commitment to transforming brands and delivering
+                            extraordinary results.
                             Our approach is rooted in four fundamental principles: Research, Plan, Kraft, and Deliver.
                         </p>
                     </div>
@@ -45,10 +51,12 @@
                 <div class="col-lg-5 col-md-5 col-sm-6 col-12">
                     <div class="about_wrapper">
                         <figure class="about-circularimage mb-0">
-                            <img src="{{ asset('frontend/assets/images/about-circularimage.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/about-circularimage.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                         <figure class="about-image1 mb-0">
-                            <img src="{{ asset('frontend/assets/images/about-image1.jpg') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/about-image1.jpg') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                     </div>
                 </div>
@@ -58,10 +66,12 @@
                     <div class="col-lg-7 col-md-7 col-sm-6 col-12 order-sm-1 order-2">
                         <div class="about_wrapper">
                             <figure class="about-image2 mb-0">
-                                <img src="{{ asset('frontend/assets/images/about-image2.jpg') }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('frontend/assets/images/about-image2.jpg') }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                             <figure class="about-globalimage mb-0">
-                                <img src="{{ asset('frontend/assets/images/about-globalimage.png') }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('frontend/assets/images/about-globalimage.png') }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                         </div>
                     </div>
@@ -69,19 +79,21 @@
                         <div class="about_content">
                             <ul class="list-unstyled">
                                 <li>
-                                    <i class="circle fa-duotone fa-check"></i>Advertising & Marketing
+                                    <i class="circle fa-duotone fa-check"></i>Performance Marketing
                                 </li>
                                 <li>
-                                    <i class="circle fa-duotone fa-check"></i>Web Development
+                                    <i class="circle fa-duotone fa-check"></i>Social Media Marketing
                                 </li>
                                 <li>
-                                    <i class="circle fa-duotone fa-check"></i>Mobile App Development
+                                    <i class="circle fa-duotone fa-check"></i>Website Devolopment
                                 </li>
                                 <li>
-                                    <i class="circle fa-duotone fa-check"></i>Search Engine Optimization
+                                    <i class="circle fa-duotone fa-check"></i>Branding
+                                </li>
+                                <li>
+                                    <i class="circle fa-duotone fa-check"></i>Influencer Marketing
                                 </li>
                             </ul>
-                            <a class="learn_more" href="about.html">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +101,7 @@
         </div>
     </section>
     <!-- Service -->
-    <section class="digital_service-section">
+    <section class="digital_service-section" id="digital_service-section">
         <div class="container-fluid service_section">
             <div class="row">
                 <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12">
@@ -108,7 +120,8 @@
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
                     <div class="service_wrapper">
                         <figure class="service-image mb-0">
-                            <img src="{{ asset('frontend/assets/images/service3-image.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/service3-image.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                     </div>
                 </div>
@@ -119,161 +132,71 @@
                         <div class="item">
                             <div class="service-box service-box1">
                                 <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon1.png') }}" alt="" class="img-fluid" />
+                                    <img src="{{ asset('frontend/assets/images/service3-icon1.png') }}" alt=""
+                                        class="img-fluid" />
                                 </figure>
-                                <h4>Business Growth</h4>
+                                <h4>Performance Marketing</h4>
                                 <p class="text-size-18">
-                                    Aaque ipsa quae ab illo inventorerg
-                                    teritatis et quasi architecto beatae
-                                    bitae nostrumEaque ipsa quae ab ill
-                                    onventoreveritatis et quasi
-                                    architect teataevitae nostrum......
+                                    We drive measurable growth through data-driven strategies, maximizing your ROI with
+                                    precision
+                                    targeting, continuous optimization, and transparent reporting.
                                 </p>
-                                <a class="read_more" href="service.html">Read More</a>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="service-box service-box2">
                                 <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon2.png') }}" alt="" class="img-fluid" />
+                                    <img src="{{ asset('frontend/assets/images/service3-icon2.png') }}" alt=""
+                                        class="img-fluid" />
                                 </figure>
-                                <h4>SEO Optimization</h4>
+                                <h4>Social Media Marketing</h4>
                                 <p class="text-size-18">
-                                    PstrumEaque iEaque ipsa quae ab il
-                                    vt quasi architecto beatae vitae nos
-                                    srumEaque ipsa quae ab ill inventore
-                                    ueritatis et quasi architect
-                                    beataevit qe nostrumravtrad aavr.
+                                    We amplify your brand’s voice on social media through tailored content strategies,
+                                    targeted ads, and community engagement, driving meaningful connections and results.
                                 </p>
-                                <a class="read_more" href="service.html">Read More</a>
                             </div>
                         </div>
                         <div class="item">
                             <div class="service-box service-box3">
                                 <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon3.png') }}" alt="" class="img-fluid" />
+                                    <img src="{{ asset('frontend/assets/images/service3-icon3.png') }}" alt=""
+                                        class="img-fluid" />
                                 </figure>
-                                <h4>Online Marketing</h4>
+                                <h4>Website Devolopment </h4>
                                 <p class="text-size-18">
-                                    Eaque ipsa quae ab illo inventorerg
-                                    veritatis et quasi architecto beatae
-                                    vitae nostrumEaque ipsa quae ab ill
-                                    inventoreveritatis et quasi
-                                    architect bea......
+                                    We develop custom websites that are visually appealing, user-friendly, and optimized for
+                                    performance, serving as the digital foundation for your business growth
                                 </p>
-                                <a class="read_more" href="service.html">Read More</a>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="service-box service-box4">
                                 <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon4.png') }}" alt="" class="img-fluid" />
+                                    <img src="{{ asset('frontend/assets/images/service3-icon4.png') }}" alt=""
+                                        class="img-fluid" />
                                 </figure>
-                                <h4>PPC Services</h4>
+                                <h4>Branding</h4>
                                 <p class="text-size-18">
-                                    ostrumEaque iEaque ipsa quae ab il
-                                    et quasi architecto beatae vitae nos
-                                    trumEaque ipsa quae ab ill inventore
-                                    veritatis et quasi architect
-                                    beataevit ae nostrum.
+                                    We craft impactful brand identities that resonate with your audience, combining
+                                    strategic design and messaging to set your business apart in the marketplace.
                                 </p>
-                                <a class="read_more" href="service.html">Read More</a>
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="service-box service-box1">
                                 <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon1.png') }}" alt="" class="img-fluid" />
+                                    <img src="{{ asset('frontend/assets/images/service3-icon1.png') }}" alt=""
+                                        class="img-fluid" />
                                 </figure>
-                                <h4>Business Growth</h4>
+                                <h4>Influencer Marketing</h4>
                                 <p class="text-size-18">
-                                    Aaque ipsa quae ab illo inventorerg
-                                    teritatis et quasi architecto beatae
-                                    bitae nostrumEaque ipsa quae ab ill
-                                    onventoreveritatis et quasi
-                                    architect teataevitae nostrum......
+                                    We connect your brand with the right influencers to authentically promote your products,
+                                    enhancing brand awareness and driving conversions through trusted partnerships
                                 </p>
-                                <a class="read_more" href="service.html">Read More</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="service-box service-box2">
-                                <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon2.png') }}" alt="" class="img-fluid" />
-                                </figure>
-                                <h4>SEO Optimization</h4>
-                                <p class="text-size-18">
-                                    PstrumEaque iEaque ipsa quae ab il
-                                    vt quasi architecto beatae vitae nos
-                                    srumEaque ipsa quae ab ill inventore
-                                    ueritatis et quasi architect
-                                    beataevit qe nostrumravtrad aavr.
-                                </p>
-                                <a class="read_more" href="service.html">Read More</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="service-box service-box3">
-                                <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon3.png') }}" alt="" class="img-fluid" />
-                                </figure>
-                                <h4>Online Marketing</h4>
-                                <p class="text-size-18">
-                                    Eaque ipsa quae ab illo inventorerg
-                                    veritatis et quasi architecto beatae
-                                    vitae nostrumEaque ipsa quae ab ill
-                                    inventoreveritatis et quasi
-                                    architect bea......
-                                </p>
-                                <a class="read_more" href="service.html">Read More</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="service-box service-box4">
-                                <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon4.png') }}" alt="" class="img-fluid" />
-                                </figure>
-                                <h4>PPC Services</h4>
-                                <p class="text-size-18">
-                                    ostrumEaque iEaque ipsa quae ab il
-                                    et quasi architecto beatae vitae nos
-                                    trumEaque ipsa quae ab ill inventore
-                                    veritatis et quasi architect
-                                    beataevit ae nostrum.
-                                </p>
-                                <a class="read_more" href="service.html">Read More</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="service-box service-box1">
-                                <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon1.png') }}" alt="" class="img-fluid" />
-                                </figure>
-                                <h4>Business Growth</h4>
-                                <p class="text-size-18">
-                                    Aaque ipsa quae ab illo inventorerg
-                                    teritatis et quasi architecto beatae
-                                    bitae nostrumEaque ipsa quae ab ill
-                                    onventoreveritatis et quasi
-                                    architect teataevitae nostrum......
-                                </p>
-                                <a class="read_more" href="service.html">Read More</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="service-box service-box2">
-                                <figure class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service3-icon2.png') }}" alt="" class="img-fluid" />
-                                </figure>
-                                <h4>SEO Optimization</h4>
-                                <p class="text-size-18">
-                                    PstrumEaque iEaque ipsa quae ab il
-                                    vt quasi architecto beatae vitae nos
-                                    srumEaque ipsa quae ab ill inventore
-                                    ueritatis et quasi architect
-                                    beataevit qe nostrumravtrad aavr.
-                                </p>
-                                <a class="read_more" href="service.html">Read More</a>
+
                             </div>
                         </div>
 
@@ -283,7 +206,7 @@
         </div>
     </section>
     <!-- Product -->
-    <section class="digital_product-section">
+    <section class="digital_product-section" >
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12 px-0">
@@ -317,10 +240,11 @@
         </div>
     </section>
     <!-- Work -->
-    <section class="digital_work-section">
+    <section class="digital_work-section" id="howitowkrs">
         <div class="container position-relative">
             <figure class="work-globalimage mb-0">
-                <img src="{{ asset('frontend/assets/images/work-globalimage.png') }}" alt="" class="img-fluid" />
+                <img src="{{ asset('frontend/assets/images/work-globalimage.png') }}" alt=""
+                    class="img-fluid" />
             </figure>
             <div class="row">
                 <div class="col-12">
@@ -335,7 +259,8 @@
                     <div class="work_content">
                         <div class="image">
                             <figure class="icon icon1 mb-0">
-                                <img src="{{ asset('frontend/assets/images/work-icon1.png') }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('frontend/assets/images/work-icon1.png') }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                             <span class="number">01</span>
                             <div class="circle circle1"></div>
@@ -346,7 +271,8 @@
                             et quasi
                         </p>
                         <figure class="work-arrowimage mb-0">
-                            <img src="{{ asset('frontend/assets/images/work-arrowimage.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/work-arrowimage.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                     </div>
                 </div>
@@ -354,7 +280,8 @@
                     <div class="work_content work_content2">
                         <div class="image">
                             <figure class="icon icon2 mb-0">
-                                <img src="{{ asset('frontend/assets/images/work-icon2.png') }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('frontend/assets/images/work-icon2.png') }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                             <span class="number">02</span>
                             <div class="circle circle2"></div>
@@ -365,7 +292,8 @@
                             beataebitae nos.
                         </p>
                         <figure class="work-arrowimage mb-0">
-                            <img src="{{ asset('frontend/assets/images/work-arrowimage.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/work-arrowimage.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                     </div>
                 </div>
@@ -373,7 +301,8 @@
                     <div class="work_content">
                         <div class="image">
                             <figure class="icon icon3 mb-0">
-                                <img src="{{ asset('frontend/assets/images/work-icon3.png') }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('frontend/assets/images/work-icon3.png') }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                             <span class="number">03</span>
                             <div class="circle circle3"></div>
@@ -384,7 +313,8 @@
                             beataebitae nos.
                         </p>
                         <figure class="work-arrowimage mb-0">
-                            <img src="{{ asset('frontend/assets/images/work-arrowimage.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/work-arrowimage.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                     </div>
                 </div>
@@ -392,7 +322,8 @@
                     <div class="work_content">
                         <div class="image">
                             <figure class="icon icon4 mb-0">
-                                <img src="{{ asset('frontend/assets/images/work-icon4.png') }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('frontend/assets/images/work-icon4.png') }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                             <span class="number">04</span>
                             <div class="circle circle4"></div>
@@ -415,10 +346,12 @@
                 <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                     <div class="testimonial_wrapper position-relative">
                         <figure class="testimonial-image mb-0">
-                            <img src="{{ asset('frontend/assets/images/testimonial3-image.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/testimonial3-image.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                         <figure class="testimonial-quote mb-0">
-                            <img src="{{ asset('frontend/assets/images/testimonial3-quote.png') }}" alt="" class="img-fluid" />
+                            <img src="{{ asset('frontend/assets/images/testimonial3-quote.png') }}" alt=""
+                                class="img-fluid" />
                         </figure>
                     </div>
                 </div>

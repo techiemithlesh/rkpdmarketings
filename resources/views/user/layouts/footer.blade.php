@@ -46,27 +46,26 @@
                                 <img src="{{ asset('frontend/assets/images/footer3-logo.png') }}" class="img-fluid" alt="">
                             </figure>
                         </a>
-                        <p class="text-size-16 footer-text">Qorem ipsum dolor sit amet, consectetur adipiscing elit
-                            aut elit tellus luctus nec ulla corper mattis aulvinar daibus leo.</p>
+                        <p class="text-size-16 footer-text">"In a world full of noise, we strive to create clarity."</p>
                         <ul class="list-unstyled mb-0 social-icons">
-                            <li><a href="#" class="text-decoration-none"><i
+                            <li><a href="https://www.facebook.com/profile.php?id=61563926907812" class="text-decoration-none"><i
                                         class="fa-brands fa-facebook-f social-networks"></i></a></li>
-                            <li><a href="#" class="text-decoration-none"><i
-                                        class="fa-brands fa-twitter social-networks"></i></a></li>
-                            <li><a href="#" class="text-decoration-none"><i
+                            <li><a href="https://www.instagram.com/rpkdmarketings_/" class="text-decoration-none"><i
+                                        class="fa-brands fa-instagram social-networks"></i></a></li>
+                            <li><a href="http://linkedin.com/company/rpkd-marketings/" class="text-decoration-none"><i
                                         class="fa-brands fa-linkedin-in social-networks"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-12 col-12 d-md-block d-none">
                         <div class="links">
                             <ul class="list-unstyled mb-0">
-                                <li><i class="fa-solid fa-square-full"></i><a href="index.html"
+                                <li><i class="fa-solid fa-square-full"></i><a href="{{ route('home') }}"
                                         class=" text-size-16 text text-decoration-none">Home</a></li>
-                                <li><i class="fa-solid fa-square-full"></i><a href="about.html"
+                                <li><i class="fa-solid fa-square-full"></i><a href="{{ route('about') }}"
                                         class=" text-size-16 text text-decoration-none">About</a></li>
-                                <li><i class="fa-solid fa-square-full"></i><a href="service.html"
+                                <li><i class="fa-solid fa-square-full"></i><a href="#"
                                         class=" text-size-16 text text-decoration-none">Services</a></li>
-                                <li><i class="fa-solid fa-square-full"></i><a href="contact.html"
+                                <li><i class="fa-solid fa-square-full"></i><a href="{{ route('contact') }}"
                                         class=" text-size-16 text text-decoration-none">Contact us</a></li>
                             </ul>
                         </div>
@@ -76,17 +75,17 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="text">
                                     <i class="fa fa-phone fa-icon footer-location"></i>
-                                    <a href="tel:+61383766284"
-                                        class="mb-0 text text-decoration-none text-size-16">+61 3 8376 6284</a>
+                                    <a href="tel:+918583947437"
+                                        class="mb-0 text text-decoration-none text-size-16">+91 8583947437</a>
                                 </li>
                                 <li class="text">
                                     <i class="fa fa-envelope fa-icon footer-location"></i>
-                                    <a href="mailto:info@keywordly.com"
-                                        class="mb-0 text text-decoration-none text-size-16">Info@keywordly.com</a>
+                                    <a href="mailto:kushal@rpkdmarketings.com"
+                                        class="mb-0 text text-decoration-none text-size-16">kushal@rpkdmarketings.com</a>
                                 </li>
                                 <li class="text">
                                     <i class="fa-solid fa-location-dot footer-location footer-location3"></i>
-                                    <p class="text1 text-size-16">21 King Street Melbourne, 3000, Australia</p>
+                                    <p class="text1 text-size-16">VIP ENCLAVE 1 BLOCK F FLAT NO 201, Kolkata, India, West Bengal</p>
                                 </li>
                             </ul>
                         </div>
@@ -99,11 +98,7 @@
                                         name="email">
                                     <button><i class="send fa-sharp fa-solid fa-paper-plane"></i></button>
                                 </div>
-                                <div class="form-group check-box">
-                                    <input type="checkbox" id="term">
-                                    <label for="term">Quis autem vel eum iure reprehenderit rui in ea voluptate
-                                        esse.</label>
-                                </div>
+
                             </form>
                         </div>
                     </div>

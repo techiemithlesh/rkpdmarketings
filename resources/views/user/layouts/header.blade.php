@@ -15,13 +15,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown active">
-                        <a class="nav-link navbar-text-color"> Home </a>
+                        <a href="{{ route('home') }}" class="nav-link navbar-text-color"> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Services</a>
+                        <a class="nav-link" href="#digital_service-section">Services</a>
                     </li>
 
                     <li class="nav-item">
@@ -33,11 +33,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
                 </ul>
                 <div class="last_list">
-                    <a class="lets_talk" href="contact.html">Let's Talk</a>
+                    <a class="lets_talk" href="{{ route('contact') }}">Let's Talk</a>
                 </div>
             </div>
         </nav>
