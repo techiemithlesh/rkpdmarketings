@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from html.fleexstudio.com/seoc/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Sep 2024 15:49:57 GMT -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +20,10 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/plugins/slick-slider.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/plugins/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css') }}">
+
+    <!-- Toastr CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 
     <!--=====  JS SCRIPT LINK =======-->
     <script src="{{ asset('frontend/assets/js/plugins/jquery-3-6-0.min.js') }}"></script>
@@ -76,6 +78,34 @@
     <script src="{{ asset('frontend/assets/js/plugins/slick-slider.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/plugins/circle-progress.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+    <!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right", // Position can be changed to top-left, bottom-right, etc.
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
+    @if (session('message'))
+        toastr.success('{{ session('message') }}');
+    @endif
+</script>
+
 
 </body>
 

@@ -4,39 +4,40 @@
             <div class="col-lg-3 col-md-6">
                 <div class="footer-logo-area">
                     <img src="{{ asset('frontend/assets/img/logo/logo1.png') }}" alt="">
-                    <p>By optimizing content, leveraging relevant keywords, and adhering to best practices,
-                        businesses can secure prominent position (SEO)</p>
+                    <p>At RPKD Marketings, we don't just deliver results —
+                        we redefine the standards of success.</p>
                     <ul>
-                        <li><a href="#"><img
-                                    src="{{ asset('frontend/assets/img/icons/facebook.svg') }}"
-                                    alt=""></a>
+                        <li>
+                        <a href="https://www.facebook.com/profile.php?id=61563926907812">
+                            <img src="{{ asset('frontend/assets/img/icons/facebook.svg') }}" alt="">
+                        </a>
                         </li>
-                        <li><a href="#"><img
-                                    src="{{ asset('frontend/assets/img/icons/instagram.svg') }}"
-                                    alt=""></a>
+                        <li>
+                            <a href="https://www.instagram.com/rpkdmarketings_/">
+                                <img src="{{ asset('frontend/assets/img/icons/instagram.svg') }}"
+                                    alt="">
+                            </a>
                         </li>
-                        <li><a href="#"><img
-                                    src="{{ asset('frontend/assets/img/icons/linkedin.svg') }}"
-                                    alt=""></a>
+                        <li>
+                            <a href="http://linkedin.com/company/rpkd-marketings/">
+                                <img  src="{{ asset('frontend/assets/img/icons/linkedin.svg') }}"
+                                    alt="">
+                                </a>
                         </li>
-                        <li><a href="#"><img
-                                    src="{{ asset('frontend/assets/img/icons/youtube.svg') }}"
-                                    alt=""></a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-2 col-md-6">
                 <div class="footer-logo-area1">
-                    <h3>About Link</h3>
+                    <h3>Important Links</h3>
                     <ul>
-                        <li><a href="blog.html">Our Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="service1.html">Services</a></li>
-                        <li><a href="case.html">Marketing</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About Us</a></li>
+                        <li><a href="{{ route('services') }}">Services</a></li>
+                        <li><a href="{{ route('casestudy') }}">Case Study</a></li>
+                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,18 +46,17 @@
                 <div class="footer-logo-area2">
                     <h3>Get in touch</h3>
                     <ul>
-                        <li><a href="mailto.html"><img
+                        <li><a href="mailto:kushal@rpkdmarketings.com"><img
                                     src="{{ asset('frontend/assets/img/icons/email.svg') }}"
-                                    alt=""><span>Infoseoc@gmail.com</span></a></li>
+                                    alt=""><span>kushal@rpkdmarketings.com</span></a></li>
                         <li><a href="#"><img
                                     src="{{ asset('frontend/assets/img/icons/location.svg') }}"
-                                    alt=""><span>8708 Technology Forest <br
+                                    alt=""><span>VIP ENCLAVE 1 BLOCK F FLAT NO 201,<br
                                         class="d-lg-block d-none">
-                                    Pl Suite 125 -G, The <br class="d-lg-block d-none"> Woodlands, TX
-                                    773</span></a></li>
-                        <li><a href="tel:123-456-7890"><img
+                                        Kolkata, India, West Bengal</span></a></li>
+                        <li><a href="tel:+91085840 05792"><img
                                     src="{{ asset('frontend/assets/img/icons/phone.svg') }}"
-                                    alt=""><span>123-456-7890</span></a></li>
+                                    alt=""><span>+91 085840 05792</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <div class="col-lg-12">
                 <div class="copyright-area">
                     <div class="pera">
-                        <p>ⓒCopyright 2024 SEOC . All rights reserved</p>
+                        <p>ⓒCopyright 2024 RKPDMARKETINGS.COM . All rights reserved</p>
                     </div>
                     <ul>
                         <li><a href="#">Terms & Conditions</a></li>

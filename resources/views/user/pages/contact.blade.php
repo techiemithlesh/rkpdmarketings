@@ -14,7 +14,7 @@
             <div class="col-lg-8 m-auto">
                 <div class="about-inner-header heading9 text-center">
                     <h1>Contact Us</h1>
-                    <a href="index.html">Home <i class="fa-solid fa-angle-right"></i> <span>Contact Us</span></a>
+                    <a href="{{ route('home') }}">Home <i class="fa-solid fa-angle-right"></i> <span>Contact Us</span></a>
                 </div>
             </div>
         </div>
