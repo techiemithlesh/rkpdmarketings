@@ -22,9 +22,9 @@
                             <br class="d-lg-block d-none"> we redefine the standards of success.
                         </p>
                         <div class="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                            <a href="contact.html" class="header-btn1">Start Ranking Now <span><i
+                            <a href="{{ route('contact') }}" class="header-btn1">Start Ranking Now <span><i
                                         class="fa-solid fa-arrow-right"></i></span></a>
-                            <a href="contact.html" class="header-btn2">Contact Now <span><i
+                            <a href="{{ route('contact') }}" class="header-btn2">Contact Now <span><i
                                         class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                     </div>
@@ -74,25 +74,7 @@
                         <p>Trusted by <br class="d-lg-block d-none"> Top Companies</p>
                     </div>
                 </div>
-                <div class="col-lg-10">
-                    <div class="slider-images-area owl-carousel">
-                        <div class="img1">
-                            <img src="{{ asset('frontend/assets/img/elements/brand-img1.png') }}" alt="">
-                        </div>
-                        <div class="img1">
-                            <img src="{{ asset('frontend/assets/img/elements/brand-img2.png') }}" alt="">
-                        </div>
-                        <div class="img1">
-                            <img src="{{ asset('frontend/assets/img/elements/brand-img3.png') }}" alt="">
-                        </div>
-                        <div class="img1">
-                            <img src="{{ asset('frontend/assets/img/elements/brand-img4.png') }}" alt="">
-                        </div>
-                        <div class="img1">
-                            <img src="{{ asset('frontend/assets/img/elements/brand-img5.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
+                <x-company-slide/>
             </div>
         </div>
     </div>
@@ -631,11 +613,6 @@
                                     class="d-lg-block d-none"> how our SEO and digital marketing services can
                                 benefit
                                 your business,</p>
-                                @if(session('message'))
-                                <div class="alert alert-success">
-                                    {{ session('message') }}
-                                </div>
-                            @endif
 
                             <form action="{{ route('submit.enquiry') }}" method="POST">
                                 @csrf
@@ -684,29 +661,8 @@
         <!--===== CONTACT AREA ENDS =======-->
 
         <!--===== CTA AREA STARTS =======-->
-        <div class="cta-section-area">
-            <img src="{{ asset('frontend/assets/img/bg/cta-bg1.png') }}" alt="" class="cta-bg1 aniamtion-key-2">
-            <img src="{{ asset('frontend/assets/img/bg/cta-bg2.png') }}" alt="" class="cta-bg2 aniamtion-key-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 m-auto">
-                        <div class="cta-header-area text-center sp4 heading2">
-                            <h2 class="text-anime-style-3">Ready To Take Your Business To <br class="d-md-block d-none">
-                                The Next Level</h2>
-                            <p data-aos="fade-up" data-aos-duration="1000">Effective PERFORMANCE MARKETING strategies not only
-                                elevate a
-                                website's visibility but also drive <br class="d-md-block d-none"> targeted
-                                traffic,
-                                enhance user experience,</p>
-                            <div class="btn-area text-center" data-aos="fade-up" data-aos-duration="1200">
-                                <a href="{{ route('contact') }}" class="header-btn1">Free Consultation <span><i
-                                            class="fa-solid fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <x-cta />
+
         <!--===== CTA AREA ENDS =======-->
     </div>
 @endsection

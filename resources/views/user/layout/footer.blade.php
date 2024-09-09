@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-logo-area">
-                    <img src="{{ asset('frontend/assets/img/logo/logo1.png') }}" alt="">
+                    <x-logo />
                     <p>At RPKD Marketings, we don't just deliver results —
                         we redefine the standards of success.</p>
                     <ul>

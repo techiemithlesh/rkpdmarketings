@@ -22,7 +22,7 @@
                             </div>
                             <div class="btn-area">
 
-                                <a href="contact.html" class="header-btn1">Free Consultation <span><i
+                                <a href="https://calendly.com/kushal111203/30min" target="_blank" class="header-btn1">Free Consultation <span><i
                                             class="fa-solid fa-arrow-right"></i></span></a>
                             </div>
                             <div class="body-overlay"></div>
@@ -72,7 +72,7 @@
             </ul>
 
             <div class="allmobilesection">
-                <a href="contact.html" class="header-btn1">Get Started <span>
+                <a href="https://calendly.com/kushal111203/30min" target="_blank" class="header-btn1">Get Started <span>
                         <i class="fa-solid fa-arrow-right"></i></span>
                 </a>
             </div>
