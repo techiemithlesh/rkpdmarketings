@@ -1,19 +1,16 @@
 <div class="col-lg-10">
     <div class="slider-images-area owl-carousel">
-        <div class="img1">
-            <img src="{{ asset('frontend/assets/img/elements/brand-img1.png') }}" alt="">
-        </div>
-        <div class="img1">
-            <img src="{{ asset('frontend/assets/img/elements/brand-img2.png') }}" alt="">
-        </div>
-        <div class="img1">
-            <img src="{{ asset('frontend/assets/img/elements/brand-img3.png') }}" alt="">
-        </div>
-        <div class="img1">
-            <img src="{{ asset('frontend/assets/img/elements/brand-img4.png') }}" alt="">
-        </div>
-        <div class="img1">
-            <img src="{{ asset('frontend/assets/img/elements/brand-img5.png') }}" alt="">
-        </div>
+        @php
+
+            $companies = \App\Models\Company::where('status', 1)->get();
+        @endphp
+
+        @forelse($companies as $company)
+            <div class="img1">
+                <img src="{{ asset($company->company_logo) }}" alt="{{ $company->company_name }}">
+            </div>
+        @empty
+            <p>No companies available.</p>
+        @endforelse
     </div>
 </div>
