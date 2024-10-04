@@ -14,7 +14,7 @@
                                     <li><a href="{{ route('about') }}">About</a></li>
                                     <li><a href="{{ route('services') }}">Services </a> </li>
                                     {{-- <li><a href="{{ route('services') }}">Testimonial </a></li> --}}
-                                    {{-- <li><a href="{{ route('portfolio') }}">Portfolio </a> </li> --}}
+                                    <li><a href="{{ route('portfolio') }}">Portfolio </a> </li>
                                     <li><a href="{{ route('casestudy') }}">Case Study </a> </li>
                                     {{-- <li><a href="#">Blogs</a> </li> --}}
                                     <li><a href="{{ route('contact') }}">Contact Us</a></li>

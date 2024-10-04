@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
@@ -41,5 +42,31 @@ class AdminController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Company created successfully!');
+    }
+
+    // WORK
+
+    public function listCategory(){
+
+        $categories = Category::paginate(10);
+        // dd($categories);
+
+        return view('admin.pages.category.list', compact('categories'));
+    }
+
+    public function createCategory(){
+        return view('admin.pages.category.create');
+    }
+
+    public function categoryStore(Request $request){
+        $request->validate([
+            'category_name' => 'string|required'
+        ]);
+
+        Category::create([
+            'category_name' => $request->category_name,
+        ]);
+
+        return redirect()->back()->with('message', 'Category Addded Successfully !');
     }
 }

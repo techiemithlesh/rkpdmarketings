@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-lg-3 m-auto">
                     <div class="about-inner-header heading9 text-center">
-                        <h1>Privacy Policy</h1>
+                        <h2>Privacy Policy</h2>
                         <a href="{{ route('home') }}">Home <i class="fa-solid fa-angle-right"></i> <span>Privacy Policy</span></a>
                     </div>
                 </div>
