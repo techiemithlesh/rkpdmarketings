@@ -33,11 +33,11 @@
                 <div class="footer-logo-area1">
                     <h3>Important Links</h3>
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="{{ route('about') }}">About Us</a></li>
-                        <li><a href="{{ route('services') }}">Services</a></li>
-                        <li><a href="{{ route('casestudy') }}">Case Study</a></li>
-                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                       
+                        <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ route('term-condition') }}">Terms & Condition</a></li>
+                        <li><a href="{{ route('cancel-refund') }}">Cancallaton & Refund</a></li>
+                        <li><a href="{{ route('shipping-delievery') }}">Shipping & Delievery</a></li>
                     </ul>
                 </div>
             </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,8 +13,16 @@ Route::get('/services', [FrontendController::class, 'services'])->name('services
 Route::get('/portfolios', [FrontendController::class, 'portfolio'])->name('portfolio');
 Route::get('/case-study', [FrontendController::class, 'caseStudy'])->name('casestudy');
 Route::get('/contact-us', [FrontendController::class, 'contactUs'])->name('contact');
-
 Route::post('/submit/enqiry', [ContactController::class, 'submitEnquiry'])->name('submit.enquiry');
+
+// POLICIES PAGES
+Route::get('/privacy-policy', [PolicyController::class, 'privacyPolicy'])->name('privacy-policy');
+Route::get('/terms-conditions', [PolicyController::class, 'termsCondition'])->name('term-condition');
+Route::get('/cancellation-refund', [PolicyController::class, 'cancelRefund'])->name('cancel-refund');
+Route::get('/shipping-delievery', [PolicyController::class, 'shippingDelievery'])->name('shipping-delievery');
+
+
+
 
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
