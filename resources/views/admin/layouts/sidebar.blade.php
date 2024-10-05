@@ -76,6 +76,22 @@
         </div>
     </li>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePortfolio"
+                aria-expanded="true" aria-controls="collapsePortfolio">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Portfolio</span>
+            </a>
+            <div id="collapsePortfolio" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="{{route('portfolio.list')}}">Portfolio List</a>
+                    <a class="collapse-item" href="{{route('portfolio.create')}}">Portfolio Create</a>
+                </div>
+            </div>
+        </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

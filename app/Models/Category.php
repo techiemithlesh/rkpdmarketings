@@ -13,7 +13,7 @@ class Category extends Model
 
     protected $fillable = ['category_name'];
 
-    public function projects(){
+    public function works(){
         return $this->hasMany(Work::class, 'category_id');
     }
 }

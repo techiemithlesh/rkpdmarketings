@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('title');
             $table->string('slug')->unique();
             $table->longText('description');
+            $table->text('live_url')->nullable();
             $table->longText('image');
             $table->timestamps();
         });

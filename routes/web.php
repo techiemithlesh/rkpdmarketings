@@ -35,7 +35,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::delete('company/{id}', [AdminController::class, 'companyDelete'])->name('admin.company.delete');
 
 
-    // WORK
+    // WORK CATEGORY
     Route::prefix('category')->group(function(){
         Route::get('list', [AdminController::class, 'listCategory'])->name('category.list');
         Route::get('create', [AdminController::class, 'createCategory'])->name('category.create');
@@ -43,6 +43,15 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('edit/{id}', [AdminController::class, 'categoryEdit'])->name('category.edit');
         Route::put('update/{id}', [AdminController::class, 'categoryUpdate'])->name('category.update');
         Route::delete('delete/{id}', [AdminController::class, 'categoryDelete'])->name('category.delete');
+    });
+
+    Route::prefix('porftolio')->group(function(){
+        Route::get('list', [AdminController::class, 'portfolioList'])->name('portfolio.list');
+        Route::get('create', [AdminController::class, 'portfolioCreate'])->name('portfolio.create');
+        Route::post('store', [AdminController::class, 'portfolioStore'])->name('portfolio.store');
+        Route::get('edit/{id}', [AdminController::class, 'portfolioEdit'])->name('portfolio.edit');
+        Route::put('update/{id}', [AdminController::class, 'portfolioUpdate'])->name('portfolio.update');
+        Route::delete('delete/{id}', [AdminController::class, 'portfolioDelete'])->name('portfolio.delete');
     });
 
 });

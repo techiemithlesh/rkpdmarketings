@@ -14,7 +14,8 @@ class Work extends Model
 
     protected $guarded = [];
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class, 'category_id');
     }
 
@@ -23,8 +24,15 @@ class Work extends Model
         parent::boot();
 
         static::creating(function ($work) {
-            
-            $work->slug = Str::slug($work->title, '-');
+            $originalSlug = Str::slug($work->title, '-');
+            $slug = $originalSlug;
+            $count = 1;
+
+            while (Work::where('slug', $slug)->exists()) {
+                $slug = $originalSlug . '-' . $count++;
+            }
+
+            $work->slug = $slug;
         });
     }
 }
