@@ -24,9 +24,6 @@
                             <tr>
                                 <th>S.N.</th>
                                 <th>Category Name</th>
-                                <th>Category Description</th>
-                                <th>Status</th>
-                                <th>Created At</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -35,9 +32,8 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $category->category_name }}</td>
-                                    <td>{!! $category->category_description !!}</td>
-                                    <td>{{ $category->status == 1 ? 'Active' : 'Inactive' }}</td>
-                                    <td>{{ $category->created_at->format('d-m-Y H:i') }}</td>
+                                   
+                                    
                                     <td>
                                         <div class="btn-group">
                                             <a href="{{ route('category.edit', $category->id) }}" class="btn btn-success" title="Edit Category">

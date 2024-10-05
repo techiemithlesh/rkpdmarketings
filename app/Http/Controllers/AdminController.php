@@ -69,4 +69,45 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Category Addded Successfully !');
     }
+
+    public function categoryEdit($id){
+        $category = Category::findOrFail($id);
+
+        return view('admin.pages.category.edit', compact('category'));
+    }
+
+    public function categoryUpdate(Request $request, $id){
+
+        $request->validate([
+            'category_name' => 'string|required'
+        ]);
+
+        $category = Category::findOrFail($id);
+
+        if(!$category){
+            return redirect()->back()->with('message', 'Category Not Available');
+        }
+
+        $category->update([
+            'category_name' => $request->category_name
+        ]);
+        
+
+        return redirect()->back()->with('message', 'Category Addded Successfully !');
+
+
+
+
+        
+    }
+
+    public function categoryDelete(Request $request, $id){
+
+        $category = Category::findOrFail($id);
+
+        $category->delete();
+
+        return redirect()->route('category.list')->with('message', 'Category Deleted Successfully !');
+
+    }
 }
