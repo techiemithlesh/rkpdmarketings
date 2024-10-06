@@ -3,6 +3,44 @@
     <title>Portfolio - RPKD Marketings</title>
 @endsection
 
+<style>
+    .portfolio_card {
+        height: 460px;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .portfolio_card:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .portfolio-info {
+        padding: 10px 0;
+    }
+
+    .portfolio-info h4 {
+        font-size: 1.1rem;
+        margin: 0 0 5px;
+    }
+
+    .btn-primary {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+</style>
+
 @section('content')
 <!--===== HERO AREA STARTS =======-->
 <div class="about-header-area"
@@ -33,7 +71,7 @@
                             data-bs-toggle="tab" data-bs-target="#category-{{ $category->id }}" type="button"
                             role="tab" aria-controls="category-{{ $category->id }}"
                             aria-selected="{{ $index === 0 ? 'true' : 'false' }}">
-                        {{ $category->category_name }}  <!-- Change to 'name' according to your model -->
+                        {{ $category->category_name }}
                     </button>
                 </li>
             @endforeach
@@ -46,13 +84,15 @@
                      aria-labelledby="tab-{{ $category->id }}">
                     <div class="row">
                         @foreach($category->works as $work)
-                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4"> <!-- Changed to display 4 items per row -->
-                                <div class="portfolio-item">
-                                    <img src="{{ asset($work->image) }}" alt="{{ $work->title }}" class="img-fluid">
-                                    <div class="portfolio-info">
-                                        <h4>{{ $work->title }}</h4>
-                                        <p>{{ $work->description }}</p>
-                                        @if($work->live_url) <!-- Display button only if live_url exists -->
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                                <div class="portfolio_card shadow position-relative">
+                                    <div class="portfolio-item">
+                                        <img src="{{ asset($work->image) }}" alt="{{ $work->title }}" class="img-fluid">
+                                        <div class="portfolio-info">
+                                            <h4>{{ $work->title }}</h4>
+                                            <p>{{ \Illuminate\Support\Str::words($work->description, 20, '...') }}</p>
+                                        </div>
+                                        @if($work->live_url)
                                             <a href="{{ $work->live_url }}" target="_blank" class="btn btn-primary">Visit Site</a>
                                         @endif
                                     </div>
@@ -67,5 +107,5 @@
 </div>
 <!--===== PORTFOLIO TABS ENDS =======-->
 
-<x-cta/>
+{{-- <x-cta/> --}}
 @endsection

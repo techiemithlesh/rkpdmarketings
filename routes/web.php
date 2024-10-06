@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'home'])->name('home');
@@ -52,6 +53,17 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('edit/{id}', [AdminController::class, 'portfolioEdit'])->name('portfolio.edit');
         Route::put('update/{id}', [AdminController::class, 'portfolioUpdate'])->name('portfolio.update');
         Route::delete('delete/{id}', [AdminController::class, 'portfolioDelete'])->name('portfolio.delete');
+    });
+
+
+    // TESTIMONIALS
+    Route::prefix('testimonial')->group(function(){
+        Route::get('list', [TestimonialController::class, 'testimonialList'])->name('testimonial.list');
+        Route::get('create', [TestimonialController::class, 'testimonialCreate'])->name('testimonial.create');
+        Route::post('store', [TestimonialController::class, 'testimonialStore'])->name('testimonial.store');
+        Route::get('edit/{id}', [TestimonialController::class, 'testimonialEdit'])->name('testimonial.edit');
+        Route::put('update/{id}', [TestimonialController::class, 'testimonialUpdate'])->name('testimonial.update');
+        Route::delete('delete/{id}', [TestimonialController::class, 'testimonialDelete'])->name('testimonial.delete');
     });
 
 });

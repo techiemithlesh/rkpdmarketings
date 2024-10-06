@@ -15,7 +15,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }}">
+    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
@@ -70,24 +70,41 @@
         </a>
         <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('category.list')}}">Category List</a>
-                <a class="collapse-item" href="{{route('category.create')}}">Category Create</a>
+                <a class="collapse-item" href="{{ route('category.list') }}">Category List</a>
+                <a class="collapse-item" href="{{ route('category.create') }}">Category Create</a>
             </div>
         </div>
     </li>
 
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePortfolio"
+            aria-expanded="true" aria-controls="collapsePortfolio">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Portfolio</span>
+        </a>
+        <div id="collapsePortfolio" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('portfolio.list') }}">Portfolio List</a>
+                <a class="collapse-item" href="{{ route('portfolio.create') }}">Portfolio Create</a>
+            </div>
+        </div>
+    </li>
+
+
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePortfolio"
-                aria-expanded="true" aria-controls="collapsePortfolio">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTestimonial"
+                aria-expanded="true" aria-controls="collapseTestimonial">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Portfolio</span>
+                <span>Testimonial</span>
             </a>
-            <div id="collapsePortfolio" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTestimonial" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="{{route('portfolio.list')}}">Portfolio List</a>
-                    <a class="collapse-item" href="{{route('portfolio.create')}}">Portfolio Create</a>
+                    <a class="collapse-item" href="{{ route('testimonial.list') }}">Testimonial List</a>
+                    <a class="collapse-item" href="{{ route('testimonial.create') }}">Testimonial Create</a>
                 </div>
             </div>
         </li>
