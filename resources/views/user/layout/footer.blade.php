@@ -77,12 +77,9 @@
             <div class="col-lg-12">
                 <div class="copyright-area">
                     <div class="pera">
-                        <p>ⓒCopyright 2024 RKPDMARKETINGS.COM . All rights reserved</p>
+                        <p>ⓒ&nbsp;Copyright 2024 RKPDMARKETINGS.COM . All rights reserved</p>
                     </div>
-                    <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#" class="m-0"> Privacy Policy </a></li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>

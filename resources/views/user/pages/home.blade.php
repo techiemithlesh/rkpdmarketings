@@ -22,10 +22,9 @@
                             <br class="d-lg-block d-none"> we redefine the standards of success.
                         </p>
                         <div class="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                            <a href="{{ route('contact') }}" class="header-btn1">Start Ranking Now <span><i
-                                        class="fa-solid fa-arrow-right"></i></span></a>
-                            <a href="{{ route('contact') }}" class="header-btn2">Contact Now <span><i
-                                        class="fa-solid fa-arrow-right"></i></span></a>
+                            <a href="{{ route('contact') }}" class="header-btn1">Free Consultation <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -33,8 +32,10 @@
                     <div class="header-images-area">
                         <div class="main-images-area">
                             <div class="img1">
-                                <img src="{{ asset('frontend/assets/img/all-images/header-img1.png') }}" alt=""
-                                    data-aos="zoom-in" data-aos-duration="1000">
+                                {{-- <img src="{{ asset('frontend/assets/img/all-images/header-img1.png') }}" alt=""
+                                    data-aos="zoom-in" data-aos-duration="1000"> --}}
+                                <img src="{{ asset('frontend/assets/img/all-images/header-img-new.png') }}" alt=""
+                                    data-aos="zoom-in" data-aos-duration="1000">    
                             </div>
                             <div class="img2">
                                 <img src="{{ asset('frontend/assets/img/bg/header-imgbg.png') }}" alt="">
@@ -54,8 +55,8 @@
                             <div class="auhtor-images">
                                 <img src="{{ asset('frontend/assets/img/all-images/header-author-img1.png') }}"
                                     alt="" class="header-author-img1 aniamtion-key-2">
-                                <img src="{{ asset('frontend/assets/img/all-images/header-author-img2.png') }}"
-                                    alt="" class="header-author-img2 aniamtion-key-2">
+                                {{-- <img src="{{ asset('frontend/assets/img/all-images/header-author-img2.png') }}"
+                                    alt="" class="header-author-img2 aniamtion-key-2"> --}}
                             </div>
                         </div>
                     </div>
@@ -74,7 +75,7 @@
                         <p>Trusted by <br class="d-lg-block d-none"> Top Companies</p>
                     </div>
                 </div>
-                <x-company-slide/>
+                <x-company-slide />
             </div>
         </div>
     </div>
@@ -82,52 +83,7 @@
     <div class="all-section-bg"
         style="background-image: url('{{ asset('frontend/assets/img/bg/pages-bg1.png') }}'); background-repeat: no-repeat; background-size: cover;">
         <!--===== ABOUT AREA STARTS =======-->
-        <div class="about1-section-area sp6">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="about-images">
-                            <figure class="image-anime reveal">
-                                <img src="{{ asset('frontend/assets/img/all-images/about-img1.png') }}" alt="">
-                            </figure>
-                            <img src="{{ asset('frontend/assets/img/elements/star1.png') }}" alt=""
-                                class="star1 keyframe5">
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="about-content-area heading2">
-                            <div class="arrow-circle">
-                                <a href="about.html">
-                                    <img src="{{ asset('frontend/assets/img/elements/elements4.png') }}" alt=""
-                                        class="elements4 keyframe5">
-                                    <img src="{{ asset('frontend/assets/img/icons/arrow.svg') }}" alt=""
-                                        class="arrow">
-                                </a>
-                            </div>
-                            <h2 class="text-anime-style-3">Strategic Marketing & Performance Solutions.</h2>
-                            <p data-aos="fade-left" data-aos-duration="1000">Welcome to RPKD Marketings, your ultimate
-                                partner for strategic marketing and performance-driven solutions. We specialize in
-                                generating high-quality leads, enhancing your digital presence, and driving 5x ROI through
-                                targeted Google and Facebook Ads, website development with compelling CTAs, and engaging
-                                social media management.</p>
-                            <div class="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                                <a href="about.html" class="header-btn1">Learn More<span><i
-                                            class="fa-solid fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="about-auhtor-images">
-                            <img src="{{ asset('frontend/assets/img/elements/elements5.png') }}" alt=""
-                                class="elements5 keyframe5">
-                            <figure class="image-anime reveal">
-                                <img src="{{ asset('frontend/assets/img/all-images/about-img2.png') }}" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <!--===== ABOUT AREA ENDS =======-->
 
         <!--===== SERVICE AREA STARTS =======-->
@@ -230,7 +186,8 @@
                             </div>
                             <div class="content-area">
                                 <h5>Our Value</h5>
-                                <a href="{{ route('services') }}" class="text text-anime-style-3">Explore Our Unique Value
+                                <a href="{{ route('services') }}" class="text text-anime-style-3">Explore Our Unique
+                                    Value
                                     Proposition & How We Drive Business Growth</a>
                                 <p data-aos="fade-up" data-aos-duration="1000">Explore our unique approach and discover
                                     how we drive substantial business growth by leveraging cutting-edge performance
@@ -287,265 +244,9 @@
         </div>
         <!--===== SERVICE AREA ENDS =======-->
 
-        <!--===== CASE AREA STARTS =======-->
-        {{-- <div class="case1-section-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 m-auto">
-                        <div class="case-header-area heading2 text-center">
-                            <img src="{{ asset('frontend/assets/img/elements/star2.png') }}" alt=""
-                                class="star2 keyframe5">
-                            <img src="{{ asset('frontend/assets/img/elements/star2.png') }}" alt=""
-                                class="star3 keyframe5">
-                            <h2 class="text-anime-style-3">Benefits of Performance Marketing & Branding</h2>
-                            <p data-aos="fade-up" data-aos-duration="1000">By investing in strategic Performance and
-                                digital
-                                marketing initiatives, businesses can <br class="d-md-block d-none"> unlock a
-                                myriad of
-                                benefits.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12" data-aos="zoom-out" data-aos-duration="1200">
-                        <div class="cs_case_study_1_list">
-                            <div class="cs_case_study cs_style_1 cs_hover_active active" data-aos="fade-up"
-                                data-aos-duration="800">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img1.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">Performace Marketing</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">Performace Marketing</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                            <div class="cs_case_study cs_style_1 cs_hover_active" data-aos="fade-up"
-                                data-aos-duration="900">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb2 cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img2.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">SEO</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">SEO</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                            <div class="cs_case_study cs_style_1 cs_hover_active" data-aos="fade-up"
-                                data-aos-duration="1000">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb3 cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img3.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">PPC Advertising</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">PPC Advertising</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                            <div class="cs_case_study cs_style_1 cs_hover_active" data-aos="fade-up"
-                                data-aos-duration="1100">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb4 cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img4.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">Social Media Marketing</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">Social Media Marketing</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                            <div class="cs_case_study cs_style_1 cs_hover_active" data-aos="fade-up"
-                                data-aos-duration="1200">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb5 cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img5.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">Content Marketing</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">Content Marketing</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                            <div class="cs_case_study cs_style_1 cs_hover_active" data-aos="fade-up"
-                                data-aos-duration="1300">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb6 cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img6.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">Email Marketing</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">Email Marketing</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                            <div class="cs_case_study cs_style_1 cs_hover_active " style="margin: 0 !important;"
-                                data-aos="fade-up" data-aos-duration="1400">
-                                <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb7 cs_bg_filed"
-                                    data-src="{{ asset('frontend/assets/img/all-images/case-img7.png') }}"></a>
-                                <div class="content-area1">
-                                    <a href="case-single.html">Analytics & Reporting</a>
-                                </div>
-                                <div class="content-area">
-                                    <a href="case-single.html">Analytics & Reporting</a>
-                                    <p>We understand the critical role that a well-designed and user-friendly
-                                        website
-                                        plays in shaping your online presence driving.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!--===== CASE AREA ENDS =======-->
-
-
         <!--===== TESTIMONIAL AREA STARTS =======-->
-        <div class="testimonial1-section-area sp6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 m-auto">
-                        <div class="testimonial-header heading2 text-center">
-                            <img src="{{ asset('frontend/assets/img/elements/star2.png') }}" alt=""
-                                class="star2 keyframe5">
-                            <img src="{{ asset('frontend/assets/img/elements/star2.png') }}" alt=""
-                                class="star3 keyframe5">
-                            <h2 class="text-anime-style-3">What Our Client Say</h2>
-                            <p data-aos="fade-up" data-aos-duration="1000">Don't just take our word for it. Hear
-                                what
-                                our satisfied clients <br class="d-md-block d-none"> have to say about their
-                                experience
-                                partnering with RKPDMARKETINGS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 m-auto" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="testimonials-slider-area owl-carousel">
-                            <div class="testimonial-boxarea">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <div class="pera">
-                                            <p>"Working with SEOC has been a game-changer for our business. Their
-                                                expertise in SEO and digital marketing has helped us achieve
-                                                remarkable
-                                                results and significantly increase our online visibility.</p>
-                                            <div class="space100"></div>
-                                            <div class="space30"></div>
-                                            <div class="list-area">
-                                                <div class="list">
-                                                    <ul>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    </ul>
-                                                    <a href="team.html">John Doe</a>
-                                                </div>
-                                                <img src="{{ asset('frontend/assets/img/icons/google.svg') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="images">
-                                            <img src="{{ asset('frontend/assets/img/all-images/testimonial-img1.png') }}"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        @include('user.components.testimonial')
 
-                            <div class="testimonial-boxarea">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <div class="pera">
-                                            <p>"Working with SEOC has been a game-changer for our business. Their
-                                                expertise in SEO and digital marketing has helped us achieve
-                                                remarkable
-                                                results and significantly increase our online visibility.</p>
-                                            <div class="space100"></div>
-                                            <div class="space30"></div>
-                                            <div class="list-area">
-                                                <div class="list">
-                                                    <ul>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    </ul>
-                                                    <a href="team.html">John Doe</a>
-                                                </div>
-                                                <img src="{{ asset('frontend/assets/img/icons/google.svg') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="images">
-                                            <img src="{{ asset('frontend/assets/img/all-images/testimonial-img2.png') }}"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonial-boxarea">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <div class="pera">
-                                            <p>"Working with SEOC has been a game-changer for our business. Their
-                                                expertise in SEO and digital marketing has helped us achieve
-                                                remarkable
-                                                results and significantly increase our online visibility.</p>
-                                            <div class="space100"></div>
-                                            <div class="space30"></div>
-                                            <div class="list-area">
-                                                <div class="list">
-                                                    <ul>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    </ul>
-                                                    <a href="team.html">John Doe</a>
-                                                </div>
-                                                <img src="{{ asset('frontend/assets/img/icons/google.svg') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="images">
-                                            <img src="{{ asset('frontend/assets/img/all-images/testimonial-img2.png') }}"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--===== TESTIMONIAL AREA ENDS =======-->
 
         <!--===== CONTACT AREA STARTS =======-->
@@ -620,7 +321,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="input-area">
-                                            <input type="text"  name="first_name" placeholder="First Name" required>
+                                            <input type="text" name="first_name" placeholder="First Name" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -647,8 +348,8 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="input-area">
-                                            <button class="header-btn1">Free Consultation <span><i
-                                                        class="fa-solid fa-arrow-right"></i></span></button>
+                                            <button class="header-btn1">Free Consultation <i
+                                                    class="fa-solid fa-arrow-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -661,7 +362,7 @@
         <!--===== CONTACT AREA ENDS =======-->
 
         <!--===== CTA AREA STARTS =======-->
-        <x-cta />
+        {{-- <x-cta /> --}}
 
         <!--===== CTA AREA ENDS =======-->
     </div>

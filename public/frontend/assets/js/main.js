@@ -151,7 +151,7 @@ $('.slider-images-area').owlCarousel({
   responsiveClass:true,
   responsive:{
       0:{
-          items:2,
+          items:4,
           nav:false,
       },
       600:{
@@ -261,7 +261,7 @@ $('.testimonials-slider-area').owlCarousel({
           items:2,
       },
       1000:{
-          items:1,
+          items:2,
       }
   }
 });
