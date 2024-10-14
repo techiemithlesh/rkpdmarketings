@@ -26299,3 +26299,40 @@ html {
 }
 
 /*============= CASE STUDY CSS AREA ENDS ===============*/ /*# sourceMappingURL=main.css.map */
+
+/* CSS ADDED BY MITHLESH */
+
+.portfolio_card {
+    height: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.portfolio_card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.portfolio-info {
+    padding: 10px 0;
+}
+
+.portfolio-info h4 {
+    font-size: 1.1rem;
+    margin: 0 0 5px;
+}
+
+.btn-primary {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

@@ -138,15 +138,25 @@ class AdminController extends Controller
 
     public function portfolioStore(Request $request)
     {
+        $isPerformanceMarketing = $request->input('category_id') == Category::where('category_name', 'Performance Marketing')->value('id');
+
+
         $request->validate([
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:tbl_work_categories,id',
             'description' => 'required|string',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=1500,height=1915',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => [
+                'required',
+                'image',
+                'mimes:jpeg,png,jpg,gif',
+                'max:2048',
+                $isPerformanceMarketing ? 'dimensions:width=1003,height=553' : 'dimensions:width=1500,height=1915',
+            ],
             'live_url' => 'nullable|url',
         ], [
-            'image.dimensions' => 'The image must be exactly 1500 pixels wide and 1915 pixels tall.',
+            'image.dimensions' => $isPerformanceMarketing
+                ? 'The image must be exactly 1003 pixels wide and 553 pixels tall.'
+                : 'The image must be exactly 1500 pixels wide and 1915 pixels tall.',
         ]);
 
         // Initialize image name
@@ -189,20 +199,31 @@ class AdminController extends Controller
 
     public function portfolioUpdate(Request $request, $id)
     {
-        // Validate incoming request
+
+        // Find the portfolio entry
+        $portfolio = Work::findOrFail($id);
+
+        // Determine if the category is 'Performance Marketing'
+        $isPerformanceMarketing = $request->input('category_id') == Category::where('category_name', 'Performance Marketing')->value('id');
+
+        // Validate the request
         $request->validate([
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:tbl_work_categories,id',
             'description' => 'required|string',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=1500,height=1915',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => [
+                'nullable', // Image is not always required during update
+                'image',
+                'mimes:jpeg,png,jpg,gif',
+                'max:2048',
+                $isPerformanceMarketing ? 'dimensions:width=1003,height=553' : 'dimensions:width=1500,height=1915',
+            ],
             'live_url' => 'nullable|url',
         ], [
-            'image.dimensions' => 'The image must be exactly 1500 pixels wide and 1915 pixels tall.',
+            'image.dimensions' => $isPerformanceMarketing
+                ? 'The image must be exactly 1003 pixels wide and 553 pixels tall.'
+                : 'The image must be exactly 1500 pixels wide and 1915 pixels tall.',
         ]);
-
-        // Find the portfolio entry
-        $portfolio = Work::findOrFail($id);
 
         // If a new image is uploaded
         if ($request->hasFile('image')) {

@@ -8,41 +8,48 @@ use App\Models\Category;
 
 class FrontendController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         return view('user.pages.home');
     }
 
-    public function about(){
+    public function about()
+    {
         return view('user.pages.about');
     }
 
-    public function services(){
+    public function services()
+    {
         return view('user.pages.services');
     }
 
-    public function contactUs(){
+    public function contactUs()
+    {
         return view('user.pages.contact');
     }
 
 
     public function portfolio()
     {
-        // Retrieve categories along with their associated works
-        $categories = Category::with('works')->latest()->get();
 
-        // return $categories;
-    
+        $categories = Category::with([
+            'works' => function ($query) {
+                $query->orderBy('created_at', 'desc');
+            }
+        ])->latest()->get();
+
         return view('user.pages.portfolio', compact('categories'));
     }
-    
-    
 
 
 
 
-    public function caseStudy(){
+
+
+    public function caseStudy()
+    {
         return view('user.pages.case_study');
     }
 
-   
+
 }
