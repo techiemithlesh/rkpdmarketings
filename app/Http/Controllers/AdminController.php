@@ -121,7 +121,7 @@ class AdminController extends Controller
     public function portfolioList()
     {
 
-        $portfolios = Work::with('category')->paginate(10);
+        $portfolios = Work::with('category')->latest()->paginate(10);
 
         return view('admin.pages.portfolio.list', compact('portfolios'));
     }
@@ -142,7 +142,8 @@ class AdminController extends Controller
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:tbl_work_categories,id',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=1500,height=1915',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=1500,height=1915',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'live_url' => 'nullable|url',
         ], [
             'image.dimensions' => 'The image must be exactly 1500 pixels wide and 1915 pixels tall.',
@@ -193,7 +194,8 @@ class AdminController extends Controller
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:tbl_work_categories,id',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=1500,height=1915',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=1500,height=1915',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'live_url' => 'nullable|url',
         ], [
             'image.dimensions' => 'The image must be exactly 1500 pixels wide and 1915 pixels tall.',

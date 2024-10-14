@@ -28,7 +28,7 @@ class FrontendController extends Controller
     public function portfolio()
     {
         // Retrieve categories along with their associated works
-        $categories = Category::with('works')->get();
+        $categories = Category::with('works')->latest()->get();
 
         // return $categories;
     
